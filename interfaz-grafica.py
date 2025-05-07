@@ -2,6 +2,8 @@ import tkinter as tk
 def saludar():
     nombre = entrada.get()
     edad = entrada.get()
+    configure = entrada.get()
+    autor = entrada.get()
     etiqueta_resultado.config(text=f"Hola {nombre}, tienes {edad} años.")
 ventana = tk.Tk()
 ventana.title("Mi primera app gráfica")
@@ -22,4 +24,7 @@ boton.pack()
 
 etiqueta_resultado = tk.Label(ventana, text="")
 etiqueta_resultado.pack()
+autor = tk.Label(ventana, text="Fabricio David Rosete Netzahualcoyotl",fg="black", bg="orange")
+autor.place(relx=3.0, rely=3.0, x=-260, y=-300, anchor="se")
+autor.pack()
 ventana.mainloop()
